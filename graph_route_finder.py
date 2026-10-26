@@ -72,5 +72,5 @@ def a_star(start, goal):
 answer = a_star("S", "G")
 
 print()
-print("Path found by A*:", answer)
+print("Starting A* Search")
 print("Total cost of this path:", get_g(answer))
