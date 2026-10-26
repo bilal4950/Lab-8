@@ -49,6 +49,8 @@ def get_f(path):
 def a_star(start, goal):
     frontier = [[start]]
 
+    count = 0
+
     while len(frontier) > 0:
 
         frontier.sort(key=get_f)
@@ -56,6 +58,8 @@ def a_star(start, goal):
         path = frontier.pop(0)
 
         node = path[-1]
+
+        count = count + 1
 
         print(
             "Exploring:",
@@ -69,6 +73,7 @@ def a_star(start, goal):
         )
 
         if node == goal:
+            print("Total nodes explored:", count)
             return path
 
         for neighbour in warehouse[node]:
